@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.inputGroup {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 6px;
+}
+
+.inputGroup button {
+    min-width: 90px;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    padding: 3px;
+    font-size: 16px;
+    background: none;
+    cursor: pointer;
+}
+
+
+.inputGroup label {
+    min-width: 90px;
+}
+
+.inputGroup input {
+    flex-grow: 1;
+    min-height: 27px;
+    outline: 0;
+}
+
+.inputGroup textarea {
+    flex-grow: 1;
+    min-height: 120px;
+}
+
+.inputGroup select {
+    min-height: 27px;
+    outline: 0;
+}

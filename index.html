@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="inputGroup">
+        <button onclick="copyfnc()">Result</button>
+        <textarea id="result"></textarea>
+    </div>
+    <div class="inputGroup">
+        <label>Code</label>
+        <input id="code" value=" -c:v h264_qsv -b:v 2.6M -look_ahead 1 -filter:v fps=30" />
+    </div>
+    <div class="inputGroup">
+        <label>Resolution</label>
+        <select id="resolution">
+            <option value="1920x1080">1920x1080</option>
+            <option value="1280x720">1280x720</option>
+            <option value="">None</option>
+        </select>
+    </div>
+    <div class="inputGroup">
+        <label>Input</label>
+        <input id="input" value="input.mp4" />
+    </div>
+    <div class="inputGroup">
+        <label>Output</label>
+        <input id="output" value="output.mp4" />
+    </div>
+    <button onclick="func()">Click</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
