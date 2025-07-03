@@ -15,7 +15,7 @@
     </div>
     <div class="inputGroup">
         <label>Code</label>
-        <input id="code" value=" -c:v h264_qsv -b:v 2.6M -look_ahead 1 -filter:v fps=25 -vf realtime=speed=3.0" />
+        <input id="code" value=" -c:v h264_qsv -b:v 3000k -maxrate 5000k -bufsize 6000k -look_ahead 1 -preset slow -c:a aac -b:a 128k -filter:v fps=25 -vf realtime=speed=3.0 />
     </div>
     <div class="inputGroup">
         <label>Resolution</label>
