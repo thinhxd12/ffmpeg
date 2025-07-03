@@ -9,7 +9,7 @@ const func = () => {
 
     res = `"C:\\Users\\thinh\\Downloads\\ffmpeg-master-latest-win64-gpl\\bin\\ffmpeg.exe" -i`
     if (resolution.value)
-        result.value = res + " " + input.value + " -c:v h264_qsv -s:v " + resolution.value + code.value + " " + output.value;
+        result.value = res + " " + input.value + resolution.value + code.value + " " + output.value;
     else
         result.value = res + " " + input.value + code.value + " " + output.value;
 }
