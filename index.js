@@ -5,13 +5,24 @@ const func = () => {
     const code = document.getElementById("code");
     const resolution = document.getElementById("resolution");
     const output = document.getElementById("output");
-
+    
 
     res = `"C:\\Users\\thinh\\Downloads\\ffmpeg-master-latest-win64-gpl\\bin\\ffmpeg.exe" -i`
     if (resolution.value)
         result.value = res + " " + input.value + " -s:v "+resolution.value + code.value + " " + output.value;
     else
         result.value = res + " " + input.value + code.value + " " + output.value;
+}
+
+const makeoutputpath = () => {
+    const input = document.getElementById("input");
+    const filenameRegex = /[^\\]+$/;
+    const match = input.value.match(filenameRegex);
+    let output = document.getElementById("output");
+
+    if (match) {
+      output.value = '"D:\\RESULT\\' + match[0];
+    }
 }
 
 const copyfnc = () => {
