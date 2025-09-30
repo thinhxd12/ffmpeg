@@ -15,23 +15,25 @@
     </div>
     <div class="inputGroup">
         <label>Code</label>
-        <input id="code" value=" -c:v h264_qsv -b:v 3000k -maxrate 5000k -bufsize 6000k -look_ahead 1 -preset slow -c:a aac -b:a 128k -filter:v fps=25 -vf realtime=speed=3.0" />
+        <input id="code" autocomplete="off" value=" -c:v h264_qsv -b:v 3000k -maxrate 5000k -bufsize 6000k -look_ahead 1 -preset slow -c:a aac -b:a 128k -r 25 -vf realtime=speed=3.0"/>
     </div>
     <div class="inputGroup">
         <label>Resolution</label>
         <select id="resolution">
             <option value="1920x1080">1920x1080</option>
             <option value="1280x720">1280x720</option>
+            <option value="1080x1920">1080x1920</option>
+            <option value="720x1280">720x1280</option>
             <option value="">None</option>
         </select>
     </div>
     <div class="inputGroup">
         <label>Input</label>
-        <input id="input" value="input.mp4" />
+        <input id="input" autocomplete="off" value="input.mp4" onchange="makeoutputpath()"/>
     </div>
     <div class="inputGroup">
         <label>Output</label>
-        <input id="output" value="output.mp4" />
+        <input id="output" autocomplete="off" value="output.mp4" />
     </div>
     <button onclick="func()">Click</button>
 
