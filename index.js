@@ -16,12 +16,12 @@ const func = () => {
 
 const makeoutputpath = () => {
     const input = document.getElementById("input");
-    const filenameRegex = /[^\\]+$/;
+    const filenameRegex = /[^\\/]+(?=\.[^.]+($|\?))/;
     const match = input.value.match(filenameRegex);
     let output = document.getElementById("output");
 
     if (match) {
-      output.value = '"D:\\RESULT\\' + match[0];
+      output.value = '"D:\\RESULT\\' + match[0]+'.mp4"';
     }
 }
 
